@@ -17,7 +17,7 @@ img{
 }
 #america{
     position: absolute;
-    top: 72%;
+    top: 70%;
     width: 200px;
 }
 #iron{
@@ -71,3 +71,53 @@ body{
     border-radius: 10px;
 }
 
+
+.model-window{
+    background-color: #337edfe9;
+    width: 20%;
+    height: 50vh;
+    z-index: 999;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 25%;
+    left: 39%;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.model{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.model-window.open{
+    display: flex;
+}
+
+.close{
+    background-color: #830A05;
+    position: relative;
+    top: -55px;
+    left: 50%;
+}
+
+@keyframes model-window {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.open .model{
+    animation: model-window 0.5s;
+}
